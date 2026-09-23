@@ -1,7 +1,7 @@
 extends Control
 
-# Path ke scene utama game kamu
-@export var game_scene_path: String = "res://MainGame.tscn"
+# Path ke scene intro game kamu
+@export var game_scene_path: String = "res://intro.tscn"
 
 # Referensi otomatis ke node-node UI
 @onready var main_buttons: VBoxContainer = $MainButtons
@@ -18,6 +18,9 @@ func _ready() -> void:
 	# Set nilai slider awal mengikuti volume bawaan
 	if volume_slider:
 		volume_slider.value = db_to_linear(AudioServer.get_bus_volume_db(0))
+		# Menghubungkan slider ke fungsi volume secara otomatis (opsional kalau belum terhubung di Signals)
+		if not volume_slider.value_changed.is_connected(_on_volume_slider_value_changed):
+			volume_slider.value_changed.connect(_on_volume_slider_value_changed)
 	
 	# Focus awal ke tombol Start
 	$MainButtons/StartButton.grab_focus()
@@ -42,7 +45,10 @@ func _on_exit_button_pressed() -> void:
 
 func _on_volume_slider_value_changed(value: float) -> void:
 	# Mengubah volume master audio (0 = mute, 1 = max)
-	AudioServer.set_bus_volume_db(0, linear_to_db(value))
+	if value == 0:
+		AudioServer.set_bus_volume_db(0, -80)
+	else:
+		AudioServer.set_bus_volume_db(0, linear_to_db(value))
 
 # --- TOMBOL BACK ---
 

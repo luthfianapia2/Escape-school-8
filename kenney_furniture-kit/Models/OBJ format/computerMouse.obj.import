@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs0j4tl0bvqfp"
+path="res://.godot/imported/computerMouse.obj-de46f20c4a81bd73c753323a81a042dc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/computerMouse.obj-de46f20c4a81bd73c753323a81a042dc.mesh"]
+
+source_file="res://kenney_furniture-kit/Models/OBJ format/computerMouse.obj"
+dest_files=["res://.godot/imported/computerMouse.obj-de46f20c4a81bd73c753323a81a042dc.mesh", "res://.godot/imported/computerMouse.obj-de46f20c4a81bd73c753323a81a042dc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
