@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://d2goh5sk7xbo1"]
+
+[ext_resource type="Script" uid="uid://cm24p8uwwrwin" path="res://player_claire.gd" id="1_uqip1"]
+[ext_resource type="AnimationLibrary" uid="uid://c3qdrnendwchj" path="res://run.res" id="2_nj6hp"]
+[ext_resource type="PackedScene" uid="uid://b0pmwgemm423j" path="res://player_claire.tscn/Idle.fbx" id="3_nj6hp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql73s"]
+height = 1.8886719
+
+[node name="PlayerClaire" type="CharacterBody3D" unique_id=2060661605]
+transform = Transform3D(-0.99999297, 0, -0.0037582705, 0, 1, 0, 0.0037582705, 0, -0.99999297, 0, 0, 0)
+script = ExtResource("1_uqip1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=484628279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010147095, 0.9419651, 0)
+shape = SubResource("CapsuleShape3D_ql73s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=14593222]
+root_node = NodePath("../Idle/Skeleton3D")
+libraries/ = ExtResource("2_nj6hp")
+autoplay = &"walk"
+
+[node name="Idle" parent="." unique_id=525226739 instance=ExtResource("3_nj6hp")]
+
+[node name="Skeleton3D" parent="Idle" index="0" unique_id=1981700751]
+bones/0/position = Vector3(0.007648098, 0.8271135, 0.005996649)
+bones/0/rotation = Quaternion(-0.031700768, -0.024806624, -0.082923874, 0.9957426)
+bones/1/rotation = Quaternion(-0.018494086, -0.006690424, 0.085244134, 0.99616593)
+bones/2/rotation = Quaternion(-0.031226259, -0.0015981516, 0.02275923, 0.99925196)
+bones/3/rotation = Quaternion(0.044512942, -0.003770893, 0.022152571, 0.9987561)
+bones/4/rotation = Quaternion(0.0451839, -0.0009262986, -0.053858813, 0.99752533)
+bones/5/rotation = Quaternion(-0.08819712, -0.010719806, 0.004734973, 0.9960341)
+bones/16/rotation = Quaternion(-0.54067814, -0.47400612, 0.56337655, -0.4069303)
+bones/17/rotation = Quaternion(0.6129717, 0.053667083, -0.0034390413, 0.7882726)
+bones/18/rotation = Quaternion(-2.5061421e-08, -1.0234539e-07, 0.18814683, 0.9821409)
+bones/19/rotation = Quaternion(0.024386756, 0.13363561, 0.055668656, 0.9891652)
+bones/20/rotation = Quaternion(0.10232594, 0.062180318, 0.16591299, 0.9788442)
+bones/21/rotation = Quaternion(0.011086042, 0.0011335282, -0.07392092, 0.99720186)
+bones/22/rotation = Quaternion(-0.014315718, -0.08988982, 0.009163644, 0.99580675)
+bones/24/rotation = Quaternion(0.09251635, -0.0011171887, 0.0015460154, 0.99570936)
+bones/25/rotation = Quaternion(0.11182488, -1.8548135e-07, -0.013547848, 0.9936356)
+bones/26/rotation = Quaternion(0.13526994, 2.291353e-08, -0.016388383, 0.99067324)
+bones/28/rotation = Quaternion(0.037410345, -0.00014827246, -1.2103103e-05, 0.9993)
+bones/29/rotation = Quaternion(0.12347597, 1.3803844e-07, -0.014959518, 0.9922348)
+bones/30/rotation = Quaternion(0.14727484, -1.01683206e-07, -0.017842779, 0.98893476)
+bones/32/rotation = Quaternion(0.09122998, -0.0010783945, 0.0014423319, 0.9958282)
+bones/33/rotation = Quaternion(0.14157152, 4.9652265e-09, -0.017151758, 0.9897794)
+bones/34/rotation = Quaternion(0.2157743, -5.081456e-08, -0.02614172, 0.9760933)
+bones/36/rotation = Quaternion(0.1074891, 0.0042959205, -0.05052672, 0.99291223)
+bones/37/rotation = Quaternion(0.12156453, 0.004208998, 0.02093326, 0.99235386)
+bones/38/rotation = Quaternion(0.09049926, 4.2750486e-08, -0.010964383, 0.99583626)
+bones/44/rotation = Quaternion(0.5341206, -0.4775092, 0.57795274, 0.39073116)
+bones/45/rotation = Quaternion(0.49900353, -0.12422042, -0.05238655, 0.8560494)
+bones/46/rotation = Quaternion(-1.18412146e-07, -3.3565934e-09, -0.240995, 0.97052646)
+bones/47/rotation = Quaternion(0.004047419, -0.14528607, -0.010339309, 0.9893274)
+bones/48/rotation = Quaternion(0.09974222, -0.07254057, -0.17838775, 0.9762004)
+bones/49/rotation = Quaternion(-0.011297258, 0.035254475, 0.20133169, 0.9788233)
+bones/50/rotation = Quaternion(0.005852825, -0.0027807623, -0.06348818, 0.9979616)
+bones/52/rotation = Quaternion(0.18895826, -0.0019652322, 0.03274196, 0.98143715)
+bones/53/rotation = Quaternion(0.089714184, 2.5025908e-08, 0.010972838, 0.9959071)
+bones/54/rotation = Quaternion(0.13260448, 1.2146788e-08, 0.016218573, 0.99103636)
+bones/56/rotation = Quaternion(0.11626098, 9.194193e-05, 0.0129118925, 0.99313486)
+bones/57/rotation = Quaternion(0.11626455, -2.5300832e-08, 0.01422005, 0.9931165)
+bones/58/rotation = Quaternion(0.21938878, 0.03609928, 0.03512037, 0.9743367)
+bones/60/rotation = Quaternion(0.17101988, -0.00041707233, 0.022800667, 0.98500365)
+bones/61/rotation = Quaternion(0.09671283, -1.3522754e-08, 0.011828805, 0.99524206)
+bones/62/rotation = Quaternion(0.16526046, 0.10274515, 0.03802382, 0.9801462)
+bones/64/rotation = Quaternion(0.12886702, -0.00058867096, 0.01975415, 0.99146503)
+bones/65/rotation = Quaternion(0.12463432, 1.1525012e-07, 0.015243742, 0.99208564)
+bones/66/rotation = Quaternion(0.19195586, -8.9538965e-08, 0.023477701, 0.9811227)
+bones/71/rotation = Quaternion(0.059171513, 0.12965798, 0.9843067, -0.10405688)
+bones/72/rotation = Quaternion(-0.33180955, -0.06591693, 0.011264631, 0.9409732)
+bones/73/rotation = Quaternion(0.5607352, -0.041294225, 0.010047573, 0.82690376)
+bones/74/rotation = Quaternion(0.35534254, -0.011827723, -0.028420292, 0.93422914)
+bones/76/rotation = Quaternion(-0.069841966, 0.020330451, 0.99367297, -0.08557325)
+bones/77/rotation = Quaternion(-0.17042583, 0.05008037, 0.0031410672, 0.984092)
+bones/78/rotation = Quaternion(0.50678986, 0.0017434729, -0.033794817, 0.8614053)
+bones/79/rotation = Quaternion(0.36291575, 0.012387735, 0.028154604, 0.9313142)
+
+[node name="AnimationPlayer" parent="Idle" index="1" unique_id=1482639147]
+autoplay = &"mixamo_com"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=872514165]
+transform = Transform3D(0.99843216, -0.055975687, 0, 0.048036333, 0.85681874, 0.5133753, -0.028736535, -0.5125704, 0.8581642, 0, 2.6381469, 2.5710437)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=275086817]
+transform = Transform3D(-0.9950211, -0.0006707739, 0.09966372, -1.5386534e-10, 0.99997735, 0.006730218, -0.09966598, 0.006696708, -0.9949985, -0.023999756, 1.576, 0.19323502)
+
+[editable path="Idle"]
