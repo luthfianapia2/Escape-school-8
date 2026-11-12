@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://baw8nbujaswos"]
+
+[ext_resource type="Script" uid="uid://2nhvbkpes1ll" path="res://win_screen.gd" id="1_5hoe6"]
+[ext_resource type="Texture2D" uid="uid://h5c22k6mjusn" path="res://Screenshot 2026-09-02 181338.png" id="1_26557"]
+[ext_resource type="Texture2D" uid="uid://ccw6ev3jv201v" path="res://kenney_furniture-kit/Wall of Shame.jpeg" id="2_luvg0"]
+[ext_resource type="Shader" uid="uid://bm2t4govinxlh" path="res://win_screen.gdshader" id="4_4kgk1"]
+[ext_resource type="FontFile" uid="uid://c4kjulcf4upxv" path="res://kenney_furniture-kit/Models/GLTF format/Blood Victim Zombie.ttf" id="4_g6jvr"]
+[ext_resource type="VideoStream" uid="uid://cyf2idkfyskw3" path="res://claireLari.ogv" id="5_g6jvr"]
+[ext_resource type="Texture2D" uid="uid://dfu57tt7bovlj" path="res://kenney_furniture-kit/Game_Button_Clipart_Vector__Red_Glossy_Button_2d_And_3d_Buttons_For_Mobile_Game_Ui__Red__Glossy__White_PNG_Image_For_Free_Download-removebg-preview.png" id="8_g6jvr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql73s"]
+texture = ExtResource("2_luvg0")
+modulate_color = Color(1, 1, 1, 0.9607843)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ufkpf"]
+shader = ExtResource("4_4kgk1")
+shader_parameter/threshold = 0.12
+shader_parameter/softness = 0.08
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql73s"]
+atlas = ExtResource("8_g6jvr")
+region = Rect2(71.25336, 146.08368, 220, 64.08322)
+
+[node name="WinScreen" type="Control" unique_id=787706466]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5hoe6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1615742982]
+modulate = Color(0.57404435, 0.57404435, 0.57404435, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.7
+anchor_bottom = 16.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_26557")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=1044582788]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 34.0
+offset_right = 1055.0
+offset_bottom = 541.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ql73s")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel" unique_id=2058910649]
+modulate = Color(1, 1, 1, 0.9098039)
+material = SubResource("ShaderMaterial_ufkpf")
+layout_mode = 0
+offset_left = 181.0
+offset_top = 32.0
+offset_right = 795.0
+offset_bottom = 595.0
+stream = ExtResource("5_g6jvr")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Label" type="Label" parent="Panel" unique_id=2043222084]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.062000003
+anchor_right = 0.5
+offset_left = -267.5
+offset_top = 77.162
+offset_right = 266.5
+offset_bottom = 194.40201
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.60784316, 0.4392157, 0, 1)
+theme_override_fonts/font = ExtResource("4_g6jvr")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL COMPLETED"
+
+[node name="TextureButton" type="TextureButton" parent="Panel" unique_id=2136343719]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 0
+offset_left = 501.0
+offset_top = 481.0
+offset_right = 901.0
+offset_bottom = 576.0
+texture_normal = SubResource("AtlasTexture_ql73s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel/TextureButton" unique_id=1568124947]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 21.0
+offset_right = 340.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("4_g6jvr")
+theme_override_font_sizes/font_size = 45
+text = "NEXT"
+
+[node name="TextureButton3" type="TextureButton" parent="Panel" unique_id=1182745275]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 0
+offset_left = 69.0
+offset_top = 483.0
+offset_right = 469.0
+offset_bottom = 578.0
+texture_normal = SubResource("AtlasTexture_ql73s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="Panel/TextureButton3" unique_id=1635821430]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 19.0
+offset_right = 335.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("4_g6jvr")
+theme_override_font_sizes/font_size = 45
+text = "HOME"

@@ -3,12 +3,18 @@
 [ext_resource type="Script" uid="uid://cedpx4v57luni" path="res://intro.gd" id="1_7xutd"]
 [ext_resource type="Texture2D" uid="uid://dju0615q35swq" path="res://kenney_furniture-kit/Models/FBX format/WoodFloor035_1K-JPG_Color.jpg" id="1_lm474"]
 [ext_resource type="Texture2D" uid="uid://jhy6v7ifbhna" path="res://kenney_furniture-kit/Isometric/wall_NE.png" id="2_7xutd"]
+[ext_resource type="FontFile" uid="uid://c4kjulcf4upxv" path="res://kenney_furniture-kit/Models/GLTF format/Blood Victim Zombie.ttf" id="2_h377d"]
+[ext_resource type="Script" uid="uid://8o0n656yr2ag" path="res://label.gd" id="2_rs8qg"]
 [ext_resource type="Texture2D" uid="uid://clqilmjkl16f4" path="res://kenney_furniture-kit/Models/FBX format/PaintedPlaster008_1K-JPG_Color.jpg" id="3_50cai"]
 [ext_resource type="PackedScene" uid="uid://r1hooi5kvy3f" path="res://kenney_furniture-kit/Models/GLTF format/desk.glb" id="3_h0kys"]
+[ext_resource type="FontFile" uid="uid://df46ic8d3c2q" path="res://Ghastly Panic.ttf" id="4_cncsp"]
 [ext_resource type="PackedScene" uid="uid://de6yagf3wjimp" path="res://kenney_furniture-kit/Models/GLTF format/chairDesk.glb" id="4_d0rr7"]
 [ext_resource type="Texture2D" uid="uid://bne4d50o7j7q8" path="res://kenney_furniture-kit/Isometric/wall_SE.png" id="4_gd62r"]
+[ext_resource type="Texture2D" uid="uid://c0jflmlig2gca" path="res://Transparent_HD_Fast_Forward_White_Icon-removebg-preview.png" id="5_smpmm"]
 [ext_resource type="PackedScene" uid="uid://bosy67y0etc6s" path="res://kenney_furniture-kit/Models/GLTF format/deskCorner.glb" id="5_wby50"]
+[ext_resource type="Texture2D" uid="uid://t4leesqlxqk7" path="res://kenney_furniture-kit/download__8_-removebg-preview.png" id="6_kp8gw"]
 [ext_resource type="PackedScene" uid="uid://dqmcwpjrx6s0j" path="res://kenney_furniture-kit/Models/GLTF format/chair.glb" id="6_xsd0a"]
+[ext_resource type="Script" uid="uid://dx2qxxm1bqha8" path="res://directional_light_3d_2.gd" id="7_gd62r"]
 [ext_resource type="PackedScene" uid="uid://c4eru888xdse4" path="res://kenney_furniture-kit/Models/GLTF format/Oriental rug by jeremy - 8-vPv5_yqKb.glb" id="7_smii7"]
 [ext_resource type="PackedScene" uid="uid://dc2cv5ruad8gl" path="res://kenney_furniture-kit/Models/GLTF format/Bookshelf by Wanja Pflüger - 15B0ihXkg3C.glb" id="8_dmx7j"]
 [ext_resource type="PackedScene" uid="uid://7g844aabvyv5" path="res://kenney_furniture-kit/Models/GLTF format/Bookcase with Books by Quaternius - tACDGJ4CGW.glb" id="9_pwhnr"]
@@ -34,6 +40,10 @@
 [ext_resource type="PackedScene" uid="uid://bybci4fjdw622" path="res://kenney_furniture-kit/Models/FBX format/Window Large by Quaternius - EipzkrS9nG.glb" id="26_bkc3p"]
 [ext_resource type="PackedScene" uid="uid://bpxu55dhkdwun" path="res://kenney_furniture-kit/Models/FBX format/Wall Window Wide by Kenney - yRpmaYy3Wq.glb" id="27_0mn6s"]
 [ext_resource type="AudioStream" uid="uid://dl5cfd5t86meo" path="res://bekson2.mpeg.mp3" id="34_50cai"]
+[ext_resource type="Script" uid="uid://ckhwhfx804s5e" path="res://directional_light_3d.gd" id="37_smpmm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql73s"]
+atlas = ExtResource("5_smpmm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycj30"]
 albedo_texture = ExtResource("1_lm474")
@@ -120,7 +130,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_7xutd"]
 resource_name = "intro_anim"
-length = 16.0
+length = 17.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -140,10 +150,10 @@ tracks/1/path = NodePath("Camera3D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 3.4333334, 3.8, 4, 5, 6, 6.5, 7, 8, 9, 10, 10.5, 11, 11.5, 12, 13, 14, 15, 16),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 3.4333334, 3.8, 4, 5, 6, 6.5, 7, 8, 9, 10, 10.5, 11, 11.5, 12, 13, 14, 15, 16, 16.5, 20.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-6.591805, 2.1358905, -10.111693), Vector3(-6.591805, 2.1358905, -10.111693), Vector3(-6.591805, 2.1358905, -5.140741), Vector3(-6.591805, 2.1358905, -0.3507738), Vector3(-6.591805, 2.1358905, 1.1218268), Vector3(-6.591805, 2.1358905, 1.1218271), Vector3(-6.591805, 2.1358905, 1.1218271), Vector3(-0.64302826, 2.1358905, 1.1218271), Vector3(5.212042, 2.1358905, 1.1472526), Vector3(5.2120414, 2.1358905, -1.75616), Vector3(5.2120414, 2.1358905, -4.460568), Vector3(5.2120414, 2.1358905, -4.460568), Vector3(-1.1719081, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -6.9254174), Vector3(-6.8926096, 2.1358905, -7.9147286), Vector3(-6.8926096, 2.1358905, -7.9147286), Vector3(-2.3984272, 2.1358905, -7.9147286), Vector3(5.4574876, 2.1358905, -7.9147286), Vector3(0.25470972, 2.1358905, -10.389895), Vector3(0.25470972, 2.1358905, -10.389895)]
+"values": [Vector3(-6.591805, 2.1358905, -10.111693), Vector3(-6.591805, 2.1358905, -10.111693), Vector3(-6.591805, 2.1358905, -5.140741), Vector3(-6.591805, 2.1358905, -0.3507738), Vector3(-6.591805, 2.1358905, 1.1218268), Vector3(-6.591805, 2.1358905, 1.1218271), Vector3(-6.591805, 2.1358905, 1.1218271), Vector3(-0.64302826, 2.1358905, 1.1218271), Vector3(5.212042, 2.1358905, 1.1472526), Vector3(5.2120414, 2.1358905, -1.75616), Vector3(5.2120414, 2.1358905, -4.460568), Vector3(5.2120414, 2.1358905, -4.460568), Vector3(-1.1719081, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -4.460568), Vector3(-6.8926096, 2.1358905, -6.9254174), Vector3(-6.8926096, 2.1358905, -7.9147286), Vector3(-6.8926096, 2.1358905, -7.9147286), Vector3(-2.3984272, 2.1358905, -7.9147286), Vector3(5.4574876, 2.1358905, -7.9147286), Vector3(0.25470972, 2.1358905, -10.389895), Vector3(0.25470972, 2.1358905, -10.389895), Vector3(2.4778714, 2.1358905, -8.82378), Vector3(2.52031, 2.1358905, -9.100015)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -152,10 +162,10 @@ tracks/2/path = NodePath("Camera3D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 3.3666666, 7.0220523, 10.016607, 12.017148, 14.017129),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 3.3666666, 7.0220523, 10.016607, 12.017148, 14.017129, 16.5, 20.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.29726538, -1.5756788, -0.020133587), Vector3(-0.29726535, -3.1026545, -0.02013359), Vector3(-0.29726538, -3.0623403, -0.020133618), Vector3(-0.2972654, 1.616174, -0.020133594), Vector3(-0.29726538, -0.52360594, -0.020133598), Vector3(-0.2972654, 0.7561322, -0.020133605), Vector3(-0.29726553, 3.1250582, -0.020133637)]
+"values": [Vector3(-0.29726538, -1.5756788, -0.020133587), Vector3(-0.29726535, -3.1026545, -0.02013359), Vector3(-0.29726538, -3.0623403, -0.020133618), Vector3(-0.2972654, 1.616174, -0.020133594), Vector3(-0.29726538, -0.52360594, -0.020133598), Vector3(-0.2972654, 0.7561322, -0.020133605), Vector3(-0.29726553, 3.1250582, -0.020133637), Vector3(0.12403476, -0.01117062, -0.01659754), Vector3(0.09912257, -0.007654589, -0.016806634)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -183,16 +193,36 @@ script = ExtResource("1_7xutd")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=695994150]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=603588292]
-offset_left = 72.0
-offset_top = 431.0
-offset_right = 1097.0
-offset_bottom = 608.0
-theme_override_colors/font_color = Color(0.43137255, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Kepala sekolah menyuruh seluruh siswa untuk segera pulang ke rumah saat bel pulang sekolah berbunyi. Namun, kamu tertidur. Kemudian saat kamu terbangun, sudah tidak ada orang di sekitarmu. Segera lari atau MATI!"
+offset_left = 46.0
+offset_top = 96.0
+offset_right = 1096.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.9137255, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_h377d")
+theme_override_font_sizes/font_size = 65
 autowrap_mode = 2
 visible_characters = 0
-visible_ratio = 0.0
+script = ExtResource("2_rs8qg")
+title_font = ExtResource("4_cncsp")
+
+[node name="next" type="TextureButton" parent="CanvasLayer/Label" unique_id=340448214]
+visible = false
+layout_mode = 0
+offset_left = 992.0
+offset_top = -71.0
+offset_right = 1492.0
+offset_bottom = 429.0
+scale = Vector2(0.2, 0.2)
+texture_normal = SubResource("AtlasTexture_ql73s")
+
+[node name="tangan" type="TextureRect" parent="CanvasLayer/Label" unique_id=1094722451]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 162.0
+offset_right = 487.0
+offset_bottom = 795.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kp8gw")
 
 [node name="Lantai" type="CSGBox3D" parent="." unique_id=809736353]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435975, 2.6167288, -2.325579)
@@ -330,6 +360,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.0570936, 0.88956237, -3.360
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2109081716]
 transform = Transform3D(0.9818721, -0.17008425, -0.08365787, 0.179838, 0.69650984, 0.6946455, -0.05987974, -0.6970979, 0.71447116, 1.2046618, 5.054664, 6.481226)
 light_specular = 1.022
+script = ExtResource("7_gd62r")
 
 [node name="desk9" parent="." unique_id=1069001691 instance=ExtResource("3_h0kys")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.121626, 0.88956237, -0.15634489)
@@ -556,11 +587,12 @@ transform = Transform3D(-0.02496368, 0, 0.69955474, 0, 0.7, 0, -0.69955474, 0, -
 libraries/ = SubResource("AnimationLibrary_50cai")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=783184758]
-transform = Transform3D(-0.010778282, 0.2927455, -0.95612955, -0.01924925, 0.9559474, 0.29290658, 0.99975663, 0.021561809, -0.004668338, -6.591805, 2.1358905, -10.111693)
+transform = Transform3D(-0.010778282, 0.29274547, -0.95612967, -0.01924925, 0.9559473, 0.2929066, 0.99975663, 0.021561807, -0.0046683387, -6.591805, 2.1358905, -10.111693)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=89408037]
 transform = Transform3D(-0.288796, 0.3579547, -0.88795567, -0.37809953, 0.80943966, 0.44927514, 0.8795667, 0.46548447, -0.09842042, -6.4205804, 4.428135, -9.417318)
+script = ExtResource("37_smpmm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2066970986]
 stream = ExtResource("34_50cai")

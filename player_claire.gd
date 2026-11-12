@@ -9,7 +9,8 @@ var current_speed = WALK_SPEED
 var initial_y_rotation = 0.0
 
 @onready var camera = $Camera3D
-@onready var anim_player = $AnimationPlayer
+# Ubah path AnimationPlayer agar menunjuk ke dalam node Idle:
+@onready var anim_player = $Idle/AnimationPlayer
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -45,15 +46,17 @@ func _physics_process(delta):
 		velocity.z = direction.z * current_speed
 		
 		if anim_player:
-			if current_speed == RUN_SPEED and anim_player.has_animation("Run"):
-				anim_player.play("Run")
-			elif anim_player.has_animation("Walk"):
-				anim_player.play("Walk")
+			# Panggil animasi mixamo_com yang ada di dalam node Idle
+			if anim_player.has_animation("mixamo_com"):
+				if anim_player.current_animation != "mixamo_com":
+					anim_player.play("mixamo_com")
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 		
-		if anim_player and anim_player.has_animation("Idle"):
-			anim_player.play("Idle")
+		if anim_player:
+			if anim_player.has_animation("mixamo_com"):
+				if anim_player.current_animation != "mixamo_com":
+					anim_player.play("mixamo_com")
 
 	move_and_slide()

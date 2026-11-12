@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://d2goh5sk7xbo1"]
 
 [ext_resource type="Script" uid="uid://cm24p8uwwrwin" path="res://player_claire.gd" id="1_uqip1"]
-[ext_resource type="AnimationLibrary" uid="uid://c3qdrnendwchj" path="res://run.res" id="2_nj6hp"]
+[ext_resource type="AnimationLibrary" uid="uid://guepl7376a7d" path="res://walk.res" id="3_dbqx4"]
 [ext_resource type="PackedScene" uid="uid://b0pmwgemm423j" path="res://player_claire.tscn/Idle.fbx" id="3_nj6hp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ql73s"]
 height = 1.8886719
+
+[sub_resource type="Animation" id="Animation_nj6hp"]
+resource_name = "run"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dbqx4"]
+_data = {
+&"run": SubResource("Animation_nj6hp")
+}
 
 [node name="PlayerClaire" type="CharacterBody3D" unique_id=2060661605]
 transform = Transform3D(-0.99999297, 0, -0.0037582705, 0, 1, 0, 0.0037582705, 0, -0.99999297, 0, 0, 0)
@@ -17,7 +25,9 @@ shape = SubResource("CapsuleShape3D_ql73s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=14593222]
 root_node = NodePath("../Idle/Skeleton3D")
-libraries/ = ExtResource("2_nj6hp")
+root_motion_local = true
+libraries/ = SubResource("AnimationLibrary_dbqx4")
+libraries/walk = ExtResource("3_dbqx4")
 autoplay = &"walk"
 
 [node name="Idle" parent="." unique_id=525226739 instance=ExtResource("3_nj6hp")]
@@ -77,11 +87,14 @@ bones/77/rotation = Quaternion(-0.17042583, 0.05008037, 0.0031410672, 0.984092)
 bones/78/rotation = Quaternion(0.50678986, 0.0017434729, -0.033794817, 0.8614053)
 bones/79/rotation = Quaternion(0.36291575, 0.012387735, 0.028154604, 0.9313142)
 
-[node name="AnimationPlayer" parent="Idle" index="1" unique_id=1482639147]
-autoplay = &"mixamo_com"
+[node name="Girl_Brows_Geo" parent="Idle/Skeleton3D" index="0" unique_id=1007897715]
+lod_bias = 0.001
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=872514165]
 transform = Transform3D(0.99843216, -0.055975687, 0, 0.048036333, 0.85681874, 0.5133753, -0.028736535, -0.5125704, 0.8581642, 0, 2.6381469, 2.5710437)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=610766142]
+transform = Transform3D(0.9984511, -0.055316582, 0.0059499033, -0.044196416, -0.7236526, 0.68874794, -0.033793513, -0.6879442, -0.72497654, 0.019562293, 2.9955938, -2.6340504)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=275086817]
 transform = Transform3D(-0.9950211, -0.0006707739, 0.09966372, -1.5386534e-10, 0.99997735, 0.006730218, -0.09966598, 0.006696708, -0.9949985, -0.023999756, 1.576, 0.19323502)

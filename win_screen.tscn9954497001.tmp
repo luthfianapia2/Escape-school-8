@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://baw8nbujaswos"]
+
+[ext_resource type="Script" uid="uid://2nhvbkpes1ll" path="res://win_screen.gd" id="1_5hoe6"]
+[ext_resource type="Texture2D" uid="uid://h5c22k6mjusn" path="res://Screenshot 2026-09-02 181338.png" id="1_26557"]
+[ext_resource type="Texture2D" uid="uid://ccw6ev3jv201v" path="res://kenney_furniture-kit/Wall of Shame.jpeg" id="2_luvg0"]
+[ext_resource type="Texture2D" uid="uid://dm1k1753br5lt" path="res://kenney_furniture-kit/Side/Transparent_HD_Fast_Forward_White_Icon-removebg-preview.png" id="3_5hoe6"]
+[ext_resource type="FontFile" uid="uid://c4kjulcf4upxv" path="res://kenney_furniture-kit/Models/GLTF format/Blood Victim Zombie.ttf" id="4_g6jvr"]
+[ext_resource type="Texture2D" uid="uid://c0jflmlig2gca" path="res://Transparent_HD_Fast_Forward_White_Icon-removebg-preview.png" id="5_4kgk1"]
+[ext_resource type="PackedScene" uid="uid://d2goh5sk7xbo1" path="res://player_claire.tscn/player_claire.tscn" id="6_luvg0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql73s"]
+texture = ExtResource("2_luvg0")
+modulate_color = Color(1, 1, 1, 0.8117647)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeq8l"]
+atlas = ExtResource("3_5hoe6")
+region = Rect2(50.882782, 88.217255, 399.69934, 327.95844)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql73s"]
+atlas = ExtResource("5_4kgk1")
+region = Rect2(53.92691, 80.91781, 395.54355, 338.20712)
+
+[node name="WinScreen" type="Control" unique_id=787706466]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5hoe6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1615742982]
+modulate = Color(0.57404435, 0.57404435, 0.57404435, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.7
+anchor_bottom = 16.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_26557")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=1044582788]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 40.0
+offset_right = 1057.0
+offset_bottom = 591.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ql73s")
+
+[node name="TextureButton2" type="TextureButton" parent="Panel" unique_id=205615896]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 0
+offset_left = -62.000008
+offset_top = 468.0
+offset_right = 338.0
+offset_bottom = 710.0
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_oeq8l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel" unique_id=2043222084]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.062000003
+anchor_right = 0.5
+offset_left = -262.5
+offset_top = 56.760002
+offset_right = 271.5
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_g6jvr")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL COMPLETED"
+
+[node name="TextureButton" type="TextureButton" parent="Panel" unique_id=2136343719]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 0
+offset_left = 827.0
+offset_top = 468.0
+offset_right = 1227.0
+offset_bottom = 710.0
+scale = Vector2(0.4, 0.4)
+texture_normal = SubResource("AtlasTexture_ql73s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Panel" unique_id=2131840439]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 123.0
+offset_right = 842.0
+offset_bottom = 567.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Panel/SubViewportContainer" unique_id=684726022]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(828, 444)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Panel/SubViewportContainer/SubViewport" unique_id=1548300076]
+transform = Transform3D(-0.023927301, 0.1254761, -0.9918081, -0.012271244, 0.99198055, 0.12579396, 0.99963844, 0.015180627, -0.022195697, -1.794801, 1.2646382, -0.14678097)
+current = true
+
+[node name="PlayerClaire" parent="Panel/SubViewportContainer/SubViewport" unique_id=2060661605 instance=ExtResource("6_luvg0")]
