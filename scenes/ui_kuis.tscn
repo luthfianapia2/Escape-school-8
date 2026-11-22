@@ -1,0 +1,275 @@
+[gd_scene format=3 uid="uid://bnbqeh14k2weq"]
+
+[ext_resource type="Script" uid="uid://c4lafmnoq3jf8" path="res://scenes/ui_kuis.gd" id="1_m0kvw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx66d"]
+bg_color = Color(0.9529412, 0.9019608, 0.8156863, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14cdr"]
+bg_color = Color(0.9098039, 0.8352941, 0.70980394, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4lci"]
+bg_color = Color(0.9098039, 0.8352941, 0.70980394, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5qd7"]
+bg_color = Color(0.8392157, 0.7254902, 0.58431375, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj0hq"]
+bg_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikj2u"]
+bg_color = Color(0.8392157, 0.7254902, 0.58431375, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugcl7"]
+bg_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_435i2"]
+bg_color = Color(0.8392157, 0.7254902, 0.58431375, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kyq7"]
+bg_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inhpj"]
+bg_color = Color(0.8392157, 0.7254902, 0.58431375, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pp1to"]
+bg_color = Color(0.76862746, 0.6039216, 0.42352942, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htemk"]
+bg_color = Color(0.9098039, 0.8352941, 0.70980394, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4745098, 0.33333334, 0.28235295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UI_Kuis" type="Control" unique_id=1823039774]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m0kvw")
+
+[node name="Background" type="ColorRect" parent="." unique_id=325749434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28627452, 0.2, 0.16078432, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=567615135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gx66d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1266581560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="LabelJudul" type="Label" parent="Panel/VBoxContainer" unique_id=835379033]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 28
+text = "KUIS PERPUSTAKAAN !!"
+horizontal_alignment = 1
+
+[node name="PanelInformasi" type="PanelContainer" parent="Panel/VBoxContainer" unique_id=444911334]
+custom_minimum_size = Vector2(840, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_14cdr")
+
+[node name="BarInformasi" type="HBoxContainer" parent="Panel/VBoxContainer/PanelInformasi" unique_id=74911953]
+custom_minimum_size = Vector2(840, 45)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LabelNomorSoal" type="Label" parent="Panel/VBoxContainer/PanelInformasi/BarInformasi" unique_id=212013397]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+horizontal_alignment = 3
+
+[node name="LabelPemisah" type="Label" parent="Panel/VBoxContainer/PanelInformasi/BarInformasi" unique_id=2025117036]
+layout_mode = 2
+text = "|"
+
+[node name="LabelBenar" type="Label" parent="Panel/VBoxContainer/PanelInformasi/BarInformasi" unique_id=607980710]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+
+[node name="PanelPertanyaan" type="PanelContainer" parent="Panel/VBoxContainer" unique_id=1289476365]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4lci")
+
+[node name="LabelPertanyaan" type="Label" parent="Panel/VBoxContainer/PanelPertanyaan" unique_id=686713710]
+custom_minimum_size = Vector2(800, 70)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_constants/line_spacing = 8
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonA" type="Button" parent="Panel/VBoxContainer" unique_id=628052847]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_f5qd7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pj0hq")
+alignment = 0
+
+[node name="ButtonB" type="Button" parent="Panel/VBoxContainer" unique_id=1627696882]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikj2u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ugcl7")
+alignment = 0
+
+[node name="ButtonC" type="Button" parent="Panel/VBoxContainer" unique_id=310363719]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_435i2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0kyq7")
+alignment = 0
+
+[node name="ButtonD" type="Button" parent="Panel/VBoxContainer" unique_id=922547233]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_inhpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pp1to")
+alignment = 0
+
+[node name="ButtonPetunjuk" type="Button" parent="Panel/VBoxContainer" unique_id=234065758]
+layout_mode = 2
+
+[node name="LabelHasil" type="Label" parent="Panel/VBoxContainer" unique_id=676749406]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_htemk")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="LabelPetunjukKunci" type="Label" parent="Panel/VBoxContainer" unique_id=1200308879]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.30588236, 0.20392157, 0.18039216, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="ButtonLanjut" type="Button" parent="Panel/VBoxContainer" unique_id=157037013]
+visible = false
+layout_mode = 2
