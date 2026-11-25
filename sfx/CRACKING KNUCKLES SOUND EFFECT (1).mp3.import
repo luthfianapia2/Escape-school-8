@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1t7qunk3eacv"
+path="res://.godot/imported/CRACKING KNUCKLES SOUND EFFECT (1).mp3-12e0cee89443955ebe0a671cbb6b7378.mp3str"
+
+[deps]
+
+source_file="res://sfx/CRACKING KNUCKLES SOUND EFFECT (1).mp3"
+dest_files=["res://.godot/imported/CRACKING KNUCKLES SOUND EFFECT (1).mp3-12e0cee89443955ebe0a671cbb6b7378.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
